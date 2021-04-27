@@ -11,5 +11,13 @@ const errorHandler = (err, req, res, next) => {
             errorCode = 401;
             errorMessages.push('missing access token')
             break;
+        case 'REGISTRATION_FAILED':
+            errorCode = 401;
+            errorMessages.push('registration failed')
+            break;
+        case 'USER_NOT_FOUND':
+            errorCode = 401;
+            errorMessages.push('user not found')
+            break;
     }
 }
